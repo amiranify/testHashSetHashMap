@@ -13,7 +13,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class MainTest {
     static final String text = "Lorem ipsum dolor sit amet";
     Map<Character, Integer> words = new HashMap<>();
-    char[] symbols = text.toLowerCase().toCharArray();
 
     @BeforeEach
     public void beforeEach() {
@@ -61,6 +60,13 @@ class MainTest {
     @Test
     public void testCharSymbols() {
         assertThat(text.toLowerCase()).isEqualTo("lorem ipsum dolor sit amet");
+        System.out.println("Тест!");
+    }
+
+    @Test
+    public void testCharArray() {
+        char[] symbols = text.toLowerCase().toCharArray();
+        assertThat(text.toLowerCase().toCharArray()).isEqualTo(symbols);
         System.out.println("Тест!");
     }
 }
