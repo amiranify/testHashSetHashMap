@@ -40,7 +40,7 @@ class MainTest {
                 max = integers.get(i);
             }
         }
-        assertThat(max).isEqualTo(42);
+        Assertions.assertEquals(max, 42);
         System.out.println("Тест!");
     }
 
@@ -53,12 +53,13 @@ class MainTest {
                 min = integers.get(i);
             }
         }
-        assertThat(min).isEqualTo(1);
+        Assertions.assertEquals(min, 1);
         System.out.println("Тест!");
     }
 
     @Test
     public void testCharSymbols() {
+        text.toLowerCase();
         assertThat(text.toLowerCase()).isEqualTo("lorem ipsum dolor sit amet");
         System.out.println("Тест!");
     }
