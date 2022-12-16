@@ -34,33 +34,20 @@ class MainTest {
     @Test
     public void testGetMax() throws Exception {
         List<Integer> integers = Arrays.asList(29, 16, 19, 38, 1, 42, 17, 24, 11, 5, 22, 18, 32, 29, 3);
-        int max = integers.get(0);
-        for (int i = 0; i < integers.size(); i++) {
-            if (max < integers.get(i)) {
-                max = integers.get(i);
-            }
-        }
-        Assertions.assertEquals(max, 42);
+        assertThat(42).isEqualTo(integers.get(5));
         System.out.println("Тест!");
     }
 
     @Test
     public void testGetMin() throws Exception {
         List<Integer> integers = Arrays.asList(29, 16, 19, 38, 1, 42, 17, 24, 11, 5, 22, 18, 32, 29, 3);
-        int min = Integer.MAX_VALUE;
-        for (int i = 0; i < integers.size(); i++) {
-            if (min > integers.get(i)) {
-                min = integers.get(i);
-            }
-        }
-        Assertions.assertEquals(min, 1);
+        assertThat(1).isEqualTo(integers.get(4));
         System.out.println("Тест!");
     }
 
     @Test
     public void testCharSymbols() {
-        text.toLowerCase();
-        assertThat(text.toLowerCase()).isEqualTo("lorem ipsum dolor sit amet");
+        assertThat("lorem ipsum dolor sit amet").isEqualTo(text.toLowerCase());
         System.out.println("Тест!");
     }
 
